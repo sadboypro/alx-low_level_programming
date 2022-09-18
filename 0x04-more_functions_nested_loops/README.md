@@ -1,1 +1,1 @@
- A function that prints out fizzBuzz
+a function that prints a triangle, followed by a new line.
