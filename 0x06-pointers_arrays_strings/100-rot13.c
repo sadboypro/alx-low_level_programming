@@ -11,20 +11,20 @@ char *rot13(char *str)
 {
 	int i = 0, j;
 
-	char encoded[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
-	char decoded[] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+	char encode[] = {"ABCDEFGHILJKMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+	char decode[] = {"NOPQRSTUVWXYZABCDEFGHILJKMnopqrstuvwxyzabcdefghijklm"};
 
 	while (str[i] != '\0')
 	{
-		for (j = 0; encoded[j] != '\0'; ++j)
+		for (j = 0; encode[j] != '\0'; ++j)
 		{
 			if (str[i] == encode[j])
-			{	
-		        str[i] = decode[j];
-		        break;
-		        }
-	        }
-	        i++;
+			{
+			str[i] = decode[j];
+			break;
+			}
+		}
+		i++;
 	}
 	return (str);
-}	
+}
